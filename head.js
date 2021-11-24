@@ -1,4 +1,4 @@
-//// AssertEqual function we are using for the tests
+//AssertEqual function we are using for the tests
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     return console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
