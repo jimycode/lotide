@@ -7,15 +7,14 @@ const eqArrays = function(array1,array2) {
   }
   return false;
 };
-//assertArrayEquals function .
+//assertArrayEquals function for test.
 const assertArrayEquals = function(firstArray,secondArray) {
   if (eqArrays(firstArray, secondArray)) {
-    console.log("This is equal");
+    console.log(`✅✅✅Assertion Passed: ${firstArray} === ${secondArray}`);
   } else {
-    console.log("Not equal");
+    console.log(`🛑🛑🛑Assertion Failed: ${firstArray} !== ${secondArray}`);
   }
 };
-  
 // middle function . which will take in an array and return the middle-most element(s) of the given array.
 const middle = function(array) {
   let middleElement = [];
@@ -41,4 +40,4 @@ assertArrayEquals(middle([1, 2, 3]), [2]); // => [2]
 assertArrayEquals(middle([1, 2, 3, 4, 5]), [3]); // => [3]
 //For arrays with an even number of elements, an array containing the two elements in the middle should be returned
 assertArrayEquals(middle([1, 2, 3, 4]), [2, 3]); // => [2, 3]
-assertArrayEquals(middle([1, 2, 3, 4, 5, 6, 7,8]), [4,5]); // => [3, 4]
+assertArrayEquals(middle([1, 2, 3, 4, 5, 6, 7,8]), [4,5]); // => [4, 5]
