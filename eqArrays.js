@@ -7,7 +7,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 //EqArrays function
-//This functions checks if both arrays are equal
+//This functions checks if both arrays are equal.
 const eqArrays = function(array1,array2) {
   
   for (let i = 0; i < array1.length; i++) {
