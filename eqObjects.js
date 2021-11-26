@@ -19,24 +19,23 @@ const assertEqual = function(actual, expected) {
     return true;
   };
 
-  // Returns true if both objects have identical keys with identical values.
+ // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
 
-    const array1 = Object.keys(object1);
-    const array2 = Object.keys(object2);
-    
-    if (array1.length !== array2.length) return false;  //First, use the Object.keys function on both objects and compare their lengths. If not equal, 
-                              //there's no point in going further: return false
-    for (let key of array1) {
-      if (Array.isArray(object1[key]) || Array.isArray(object2[key])) {
-        return (eqArrays(object1[key], object2[key]));
-      // If they are not arrays assumes the values are primitives and compare them
-      } else if (object1[key] !== object2[key]) return false;
-    }
-    return true;
-  };
+  const array1 = Object.keys(object1);
+  const array2 = Object.keys(object2);
   
+  if (array1.length !== array2.length) return false;  //First, use the Object.keys function on both objects and compare their lengths. If not equal, 
+                            //there's no point in going further: return false
+  for (let key of array1) {
+    if (Array.isArray(object1[key]) || Array.isArray(object2[key])) { // Array.isArray() checks if objects is an Array.
+      return (eqArrays(object1[key], object2[key]));  // If they are not arrays assumes the values are primitives and compare them
+    
+    } else if (object1[key] !== object2[key]) return false;
+  }
+  return true;
+};
   
   // Tests
   const ab = { a: "1", b: "2" };
