@@ -27,7 +27,7 @@ const map = function(array, callback)  {
     return results;
   }
 
-const results1 = map(words, word => word[0]); // takes the 0 index.
+const results1 = map(words, word => word[0]); // takes the 0 index
 console.log(results1);
 
 const listOne = ["ground", "control", "to", "major", "tom"];
